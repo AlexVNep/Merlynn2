@@ -104,7 +104,7 @@ export default function InputForm({ modelId }: InputFormProps) {
   };
 
   return (
-    <div className="flex flex-col w-full max-w-lg rounded-lg bg-gray-100 p-6 shadow-md">
+    <div className="flex flex-col w-full max-w-lg text-black rounded-lg bg-gray-100 p-6 shadow-md">
       {data ? (
         <div>
           <h2 className="text-xl font-bold mb-4">{data.attributes.name}</h2>
