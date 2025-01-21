@@ -1,4 +1,5 @@
 import { Schema } from "mongoose";
+
 // Domain interface defines different types of domains for attributes
 export interface Domain {
   type: "DomainC" | "DomainR"; // Can be categorical (Nominal) or range-based (Continuous)
@@ -103,4 +104,41 @@ export interface BatchJob {
   progress: number;
   size: number;
   uploaded: string;
+}
+
+export interface Decision {
+  _id: string;
+  decision: string;
+  confidence: string;
+  createdAt: string;
+}
+
+interface MongoInput {
+  INPUTVAR1: number;
+  INPUTVAR2: string;
+  INPUTVAR3: number;
+  INPUTVAR4: string;
+  INPUTVAR5: string;
+  INPUTVAR6: string;
+}
+
+interface MongoAttributes {
+  confidence: number;
+  decision: string;
+  input: MongoInput;
+  "meets-confidence": boolean;
+  model: string;
+  timestamp: string; // ISO 8601 format
+}
+
+interface MongoData {
+  attributes: MongoAttributes;
+  id: string;
+  type: string;
+}
+
+export interface MongoReturn {
+  data: MongoData;
+  _id: string;
+  __v: number;
 }
