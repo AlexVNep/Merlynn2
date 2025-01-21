@@ -6,7 +6,6 @@ import {
   DocumentDuplicateIcon,
   DocumentPlusIcon,
   ArrowUpIcon,
-  ArrowDownIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -39,11 +38,6 @@ const links: Links[] = [
     name: "Batch Upload ",
     href: "/batchUpload",
     icon: ArrowUpIcon,
-  },
-  {
-    name: "Batch Download ",
-    href: "/batchdownload",
-    icon: ArrowDownIcon,
   },
 ];
 export default function Sidebar() {
