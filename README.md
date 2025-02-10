@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Merlynn Intelligence Technologies - Coding Assessment but using TypeScript and no NextAuth
 
-## Getting Started
+## Overview
 
-First, run the development server:
+This project is a ReactJS web application developed as part of the Merlynn Intelligence Technologies coding assessment. The application integrates with the TOM API to pull metadata and allow users to interact with the "Drink choice" model.
 
-```bash
+## Features
+
+## Task 1
+
+Fetch Model Metadata
+
+Retrieves metadata from the TOM API for the "Drink choice" model.
+
+Displays the model name and input variables in a form for user interaction.
+
+Uses the v3/models or v3/models/[id] API endpoint.
+
+Query the Model
+
+Submits user inputs from the form to the TOM API.
+
+Displays the model's decision based on the input.
+
+Uses the v3/decision/[id] API endpoint.
+
+## Task 2 (Enhancements)
+
+User Model Selection: Allows users to choose any model from the TOM API.
+
+Data Storage: Implements functionality to store retrieved model data.
+
+Batch Processing: Supports batch queries using TOM API batch functionality.
+
+UI Enhancements: Uses TailwindCSS for styling and improved user experience.
+
+## Technologies Used
+
+ReactJS: Front-end framework for building UI components.
+
+API Integration: Fetching data from the TOM API.
+
+TailwindCSS: Styling for a clean and modern interface.
+
+MongoDB & Mongoose: Database for storing user interactions (optional enhancement).
+
+
+## How to Use
+
+Clone the repository:
+
+git clone git@github.com:AlexVNep/merlynn2.git
+
+Navigate to the project folder:
+
+cd merlynn2
+
+Install dependencies:
+
+npm install
+
+Start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+create a .env file and input the following:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+API_KEY= your own
+MONGODB_URI= your own
+AUTH_SECRET= (run command: openssl rand -base64 32)
+SESSION_SECRET=(run command: openssl rand -base64 32)
+AUTH_URL=http://localhost:3000/api/auth
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open your browser and access:
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000/
